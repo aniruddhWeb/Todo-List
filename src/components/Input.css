@@ -1,0 +1,110 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto+Mono:wght@300&display=swap");
+
+.taskContainer {
+  display: flex;
+  width: 65%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskInput,
+.taskInput:focus {
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: orangered;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0 20px;
+  width: 100%;
+  font-size: medium;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+.addBtn {
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 20%;
+  font-size: medium;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+  transition: 0.3s ease-out;
+}
+
+.addBtn:hover,
+.addBtn:active {
+  transform: scale(1.1);
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto+Mono:wght@300&display=swap");
+
+.taskContainer {
+  display: flex;
+  flex-direction: column; /* Change to column layout for small screens */
+  width: 90%; /* Use percentages to make it responsive */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin: auto;
+  justify-content: center; /* Center vertically for small screens */
+  align-items: center;
+}
+
+.taskInput{
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: orangered;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px 0; /* Add some vertical spacing */
+  width: 100%;
+  font-size: medium;
+  font-style: normal;
+  font-family: "Lato", sans-serif, "Roboto Mono", monospace; /* Combine font families */
+}
+
+.addBtn {
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 100%; /* Fill the width on small screens */
+  font-size: medium;
+  font-family: "Lato", sans-serif, "Roboto Mono", monospace; /* Combine font families */
+  font-weight: 800;
+  transition: 0.3s ease-out;
+}
+
+.addBtn:hover,
+.addBtn:active {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (min-width: 768px) {
+  .taskContainer {
+    flex-direction: row; /* Revert to row layout for larger screens */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .taskInput,
+  .taskInput:focus {
+    margin: 0 10px; /* Adjust horizontal margin */
+  }
+
+  .addBtn {
+    width: 20%; /* Revert to original width */
+  }
+}
+

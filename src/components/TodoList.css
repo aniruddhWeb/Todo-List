@@ -1,0 +1,214 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto+Mono:wght@300&display=swap");
+
+.listContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  margin-top: 20px;
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: orangered;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+}
+
+.listContent {
+  display: flex;
+}
+
+.checkedItem {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.Check {
+  background: none;
+  border: 2px solid orangered;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  font-size: large;
+}
+
+.deleteBtn:hover {
+  transform: rotate(20deg);
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto+Mono:wght@300&display=swap");
+
+.listContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  margin-top: 20px;
+  max-height: 30rem;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: orangered;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+  width: 93%;
+}
+
+.listContent {
+  display: flex;
+}
+
+.listScroller {
+  display: flex;
+  flex-direction: column;
+  max-height: 20rem;
+  overflow: auto;
+  margin: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: black orangered;
+}
+
+.listScroller::-webkit-scrollbar{
+  width: 5px;
+}
+
+.listScroller::-webkit-scrollbar-thumb{
+  background-color: orangered; 
+  border-radius: 10px;
+}
+
+.listScroller::-webkit-scrollbar-thumb:horizontal{
+  background: transparent;
+}
+
+.listScroller::-webkit-scrollbar-track{
+  background-color: transparent ;
+}
+
+.listScroller::-webkit-scrollbar-corner{
+  background-color: transparent ;
+}
+
+.checkedItem {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.Check {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  font-size: large;
+}
+
+.Buttons {
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: fit-content; /* Fill the width on small screens */
+  font-size: medium;
+  font-family: "Lato", sans-serif, "Roboto Mono", monospace; /* Combine font families */
+  font-weight: 800;
+  transition: 0.3s ease-out;
+  margin-right: 10px;
+}
+
+.Buttons:hover,
+.Buttons:active {
+  transform: scale(1.1);
+}
+
+.deleteBtn:hover {
+  transform: rotate(20deg);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .listContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .listScroller {
+    max-height: 20rem;
+    margin: 10px;
+     /* Adjust max height for scroll container */
+  }
+  
+  ul {
+    margin: 10px auto;
+    width: 93%;
+  }
+
+  ul li {
+    width: 93%;
+    font-size: smaller;
+    margin: 5px;
+  }
+
+  .Buttons {
+    width: fit-content; 
+    margin-bottom: 15px;
+  }
+}
