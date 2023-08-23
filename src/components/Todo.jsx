@@ -13,7 +13,7 @@ const Todo = () => {
     setTodos(storedTodos);
     setCheckedItems(new Array(storedTodos.length).fill(false));
     console.log(setCheckedItems, "checking");
-  },[]);  
+  });  
 
   useEffect(() => {
     window.localStorage.setItem("todos", JSON.stringify(todos));
